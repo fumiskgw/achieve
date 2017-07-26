@@ -21,7 +21,7 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blogs_params)
     if @blog.save
-    redirect_to root_path, notice: "ブログを作成しました！"
+    redirect_to blogs_path, notice: "ブログを作成しました！"
     else
     render 'new'
     end
@@ -36,8 +36,11 @@ class BlogsController < ApplicationController
   end
   
   def destroy
-    @blog.destroy
-    redirect_to blogs_path
+    if @blog.destroy
+    redirect_to blogs_path, notice: "ブログを削除しました！"
+    else
+    render 'blogs'
+    end
   end
   
   
