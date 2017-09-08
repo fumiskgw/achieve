@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+100.times do |n|
+  title = Faker::Pokemon.name
+  content = Faker::Pokemon.location
+  Blog.create!(title: title,
+               content: content,
+               user_id: 1
+               )
+end
