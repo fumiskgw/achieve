@@ -10,6 +10,7 @@
   content = Faker::Pokemon.location
   Blog.create!(title: title,
                content: content,
-               user_id: 1
+               user_id: n
                )
+               n = n + 1
 end
