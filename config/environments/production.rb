@@ -82,8 +82,8 @@ config.action_mailer.default_url_options = { host: 'https://glacial-garden-95639
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings =
 {
- user_name: ENV['app72271930@heroku.com'],
- password: ENV['xaplnvfk9409'],
+ user_name: ENV['SENDGRID_USERNAME'],
+ password: ENV['SENDGRID_PASSWORD'],
  domain: "heroku.com",
  address: "smtp.sendgrid.net",
  port: 587,
